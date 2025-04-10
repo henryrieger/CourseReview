@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.virginia.sde.reviews.CourseReviewController">
+   <children>
+      <TableView fx:id="reviewTableView" layoutY="54.0" prefHeight="484.0" prefWidth="1281.0">
+        <columns>
+          <TableColumn fx:id="ratingColumn" prefWidth="103.0" text="Rating" />
+          <TableColumn fx:id="reviewColumn" prefWidth="969.0" text="Review" />
+            <TableColumn fx:id="dateColumn" minWidth="0.0" prefWidth="208.0" text="Date" />
+        </columns>
+      </TableView>
+      <VBox layoutX="67.0" layoutY="312.0" prefHeight="31.0" prefWidth="95.0" />
+      <Line endX="1180.0" layoutX="100.0" layoutY="585.0" startX="-100.0" />
+      <Label fx:id="averageRating" layoutX="504.0" layoutY="546.0" prefHeight="31.0" prefWidth="274.0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <RadioButton contentDisplay="BOTTOM" layoutX="28.0" layoutY="656.0" mnemonicParsing="false" onAction="#handleRatingScore" text="1" toggleGroup="$ratingGroup">
+         <toggleGroup>
+            <ToggleGroup fx:id="ratingGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton contentDisplay="BOTTOM" layoutX="79.0" layoutY="656.0" mnemonicParsing="false" onAction="#handleRatingScore" text="2" toggleGroup="$ratingGroup" />
+      <RadioButton contentDisplay="BOTTOM" layoutX="127.0" layoutY="656.0" mnemonicParsing="false" onAction="#handleRatingScore" text="3" toggleGroup="$ratingGroup" />
+      <RadioButton contentDisplay="BOTTOM" layoutX="182.0" layoutY="656.0" mnemonicParsing="false" onAction="#handleRatingScore" text="4" toggleGroup="$ratingGroup" />
+      <RadioButton contentDisplay="BOTTOM" layoutX="237.0" layoutY="656.0" mnemonicParsing="false" onAction="#handleRatingScore" text="5" toggleGroup="$ratingGroup" />
+      <VBox layoutX="16.0" layoutY="378.0" prefHeight="25.0" prefWidth="53.0" />
+      <Text layoutX="231.0" layoutY="700.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5 (best)" />
+      <TextField fx:id="review" alignment="TOP_LEFT" layoutX="373.0" layoutY="621.0" prefHeight="83.0" prefWidth="592.0" promptText="Your review..." />
+      <Button layoutX="1049.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="26.0" prefWidth="91.0" text="Save" />
+      <Button layoutX="1049.0" layoutY="675.0" mnemonicParsing="false" onAction="#handleErase" prefHeight="26.0" prefWidth="91.0" text="Erase" />
+      <Button layoutX="1122.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToCoursePage" prefHeight="31.0" prefWidth="141.0" text="Back to Courses" />
+      <Text layoutX="79.0" layoutY="633.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rating (required)">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Text layoutX="21.0" layoutY="701.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1 (worst)" />
+      <Label fx:id="courseTitleLabel" layoutX="21.0" layoutY="14.0" prefHeight="31.0" prefWidth="688.0" textAlignment="CENTER">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <Text layoutX="373.0" layoutY="613.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Write a review:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="saveWithoutComplete" layoutX="1008.0" layoutY="598.0" prefHeight="17.0" prefWidth="229.0" textFill="#ff4700">
+         <font>
+            <Font size="12.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
